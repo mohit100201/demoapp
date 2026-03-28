@@ -1,9 +1,6 @@
 import SectionRenderer from "@/components/sections/SectionRenderer";
 import { pages } from "@/data/siteContent";
 
-
-export default function Home() {
-  return (
-    <SectionRenderer sections={pages.home.sections} />
-  );
+export default function ServicesPage() {
+  return <SectionRenderer sections={pages.services.sections} />;
 }
