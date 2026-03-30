@@ -313,7 +313,12 @@ export default function PageContentEditor({ pages, onChange }: PageContentEditor
                       </div>
                       <div className="space-y-2">
                         <Label>Type</Label>
-                        <Input value={section.type} onChange={(event) => updateSection(pageKey, sectionIndex, (curr) => ({ ...curr, type: event.target.value as Section["type"] }))} />
+                        <Input
+                          value={section.type}
+                          onChange={(event) =>
+                            updateSection(pageKey, sectionIndex, (curr) => ({ ...curr, type: event.target.value as Section["type"] }) as Section)
+                          }
+                        />
                       </div>
                       <div className="space-y-2">
                         <Label>Order</Label>
